@@ -56,9 +56,8 @@ function onEscClose(evt) {
     const EscKeyCode = 'Escape';
     if (evt.code === EscKeyCode) {
         instance.close();
-    }
-
-    
+        window.removeEventListener('keydown', onEscClose)
+    }    
 }
 }
 
